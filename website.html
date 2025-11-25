@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MineHeart Join Fixes</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: #eee;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        max-width: 800px;
+        background: #1e1e1e;
+        padding: 50px 40px;
+        margin: 40px 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        text-align: center;
+    }
+
+    h1, h2, h3 {
+        margin-bottom: 24px;
+        color: #fff;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-top: 40px;
+    }
+
+    h3 {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 30px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 16px;
+        color: #ccc;
+    }
+
+    ul, ol {
+        text-align: center;
+        display: inline-block;
+        padding-left: 0;
+        margin-bottom: 30px;
+        list-style-position: inside;
+    }
+
+    ul li, ol li {
+        margin: 10px 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 30px 0;
+        border-radius: 8px;
+    }
+
+    .important {
+        font-weight: bold;
+        color: #ff5555;
+    }
+
+    .italic {
+        font-style: italic;
+        color: #aaa;
+    }
+
+    .footer {
+        font-size: 14px;
+        color: #888;
+        margin-top: 50px;
+    }
+
+    a {
+        color: #4da6ff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #333;
+        margin: 40px 0;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>MineHeart Join Fixes</h1>
+    <img src="images/image1.png" alt="MineHeart Logo">
+    <p class="italic">A simple troubleshooting guide for players who are unable to connect to the server.</p>
+
+    <h2>1. Make sure you are using the correct Minecraft version</h2>
+    <p>MineHeart currently supports multiple 1.21 versions. Try joining with the latest version available.</p>
+
+    <h2>2. Check if the server is online</h2>
+    <p>Sometimes temporary maintenance or restarts can cause connection issues.</p>
+
+    <p class="important">Before troubleshooting, it's best to:</p>
+    <ul>
+        <li>Check the server's Discord announcements</li>
+        <li>Check the error you got while attempting to join</li>
+    </ul>
+
+    <hr>
+
+    <h2>Actual Troubleshooting</h2>
+
+    <h3>3. Fix "Unable to Connect to World" (Bedrock)</h3>
+    <p>If you're on Bedrock and unable to join, try to:</p>
+    <ol>
+        <li>Close Minecraft fully</li>
+        <li>Restart your device</li>
+        <li>Add the server manually:
+            <ul>
+                <li>Name: MineHeart</li>
+                <li>IP: play.mineheart.net</li>
+                <li>Port: 19132</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>4. Flush DNS (Recommended)</h3>
+    <p>If you get stuck on "Connecting..." or "Loading terrain," this often fixes it:</p>
+    <ol>
+        <li>Press <strong>Win + R</strong></li>
+        <li>Type <code>cmd</code> and press Enter</li>
+        <li>Run <code>ipconfig /flushdns</code></li>
+    </ol>
+
+    <h3>5. Disable VPN / Mobile Hotspot</h3>
+    <p>VPNs, hotel WiFi, or mobile hotspots can block certain ports. Try switching networks.</p>
+
+    <hr>
+
+    <h3>Connection timed out: getsockopt</h3>
+    <p class="important">This is a common issue:</p>
+    <ol>
+        <li>Restart your router + PC</li>
+        <li>Disable Windows Firewall temporarily (at your own risk)</li>
+        <li>Ensure Java/Minecraft are allowed through the firewall</li>
+        <li>Check VPN/proxy settings</li>
+        <li>Flush DNS and reset network stack</li>
+    </ol>
+
+    <h3>6. Delete Minecraft cache</h3>
+    <ol>
+        <li>Press <strong>Win + R</strong></li>
+        <li>Type <code>%appdata%/.minecraft</code> and press Enter</li>
+        <li>Delete the folders <em>assets</em> and <em>libraries</em></li>
+        <li>Restart Minecraft</li>
+    </ol>
+
+    <h3>7. Redownload Minecraft and Minecraft Launcher</h3>
+    <p class="italic">Delete your Minecraft version and launcher, restart your PC, redownload, and try joining again.</p>
+
+    <h3>8. Reset the network stack</h3>
+    <ol>
+        <li>Open CMD as admin and run:</li>
+        <li><code>netsh winsock reset</code></li>
+        <li><code>netsh int ip reset</code></li>
+        <li><code>ipconfig /flushdns</code></li>
+        <li><code>ipconfig /release</code></li>
+        <li><code>ipconfig /renew</code></li>
+    </ol>
+
+    <p class="important">If all else fails:</p>
+    <ul>
+        <li>Open a support ticket with your username, version, screenshot of error, region, and additional info</li>
+        <li>Join the help server: <a href="https://discord.gg/EAuJbbsx2s" target="_blank">Discord Link</a></li>
+    </ul>
+
+    <p>If staff can't help, options left:</p>
+    <ol>
+        <li>Contact your ISP</li>
+        <li>Reinstall Windows (highest chances)</li>
+    </ol>
+
+    <div class="footer">
+        <p>Last Updated: November 25, 2025</p>
+        <p>Maintained by: <strong>Jinxedup_</strong> (MineHeart Staff)</p>
+    </div>
+</div>
+</body>
+</html>
